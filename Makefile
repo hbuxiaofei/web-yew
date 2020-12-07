@@ -1,5 +1,5 @@
 build:
-	wasm-pack build --target web
+	wasm-pack build --target web --out-dir ./static/wasm
 	./node_modules/.bin/rollup ./static/index.js --format iife --file ./static/wasm/index.out.js
 
 
