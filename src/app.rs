@@ -16,9 +16,23 @@ impl Component for App {
         true
     }
 
+    fn change(&mut self, _: <Self as yew::Component>::Properties) -> bool {
+        true
+    }
+
     fn view(&self) -> Html {
+        let text = "text";
+
         html! {
-            <p>{ "Hello world!" }</p>
+            <>
+                <h1>{"Heading"}</h1>
+                <p>{"This is the paragraph."}</p>
+                <p>{text}</p>
+                <a href="https://yew.rs/docs/zh-CN">{"Yew Docs"}</a>
+                <div>
+                    <button> { "Click me!" } </button>
+                </div>
+            </>
         }
     }
 }
